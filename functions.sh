@@ -39,7 +39,7 @@ shortest() {
 #shortest
 
 print_log(){
-        echo "[$(date +%F' '%T)] -> $str"
+        echo "[$(date +%F' '%T)] $str"
 
 }
 
