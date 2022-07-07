@@ -2,6 +2,10 @@
 
 pow() {
         zh=1
+
+        var1=$1
+        var2=$2
+
         while [ $var2 -ge 1 ]
         do
                 zh=$[$zh*$var1]
@@ -10,13 +14,10 @@ pow() {
         echo $zh
 }
 
-#var1=$1
-#var2=$2
-#pow
-
 
 shortest() {
 
+        arr=("$@")
         sh=99999
         for i in ${arr[@]}
         do
@@ -35,15 +36,11 @@ shortest() {
         done
 }
 
-#arr=("$@")
-#shortest
-
 print_log(){
-        echo "[$(date +%F' '%T)] $str"
 
+        str=$@
+        echo "[$(date +%F' '%T)] $str"
 }
 
-#str=$@
-#print_log
 
 # Put your code here
