@@ -21,17 +21,19 @@ shortest() {
         sh=99999
         for i in ${arr[@]}
         do
+                i=$(echo $i | sed 's/,//g')
                 if [[ ${#i} -lt $sh ]]
                 then
-                 sh=${#i}
+                sh=${#i}
                 fi
         done
 
         for i in ${arr[@]}
         do
+                i=$(echo $i | sed 's/,//g')
                 if [[ ${#i} -eq $sh ]]
                 then
-                echo "$i"
+                echo "$(echo $i | sed 's/,//g')"
                 fi
         done
 }
@@ -41,6 +43,7 @@ print_log(){
         str=$@
         echo "[$(date +%F' '%T)] $str"
 }
+
 
 
 # Put your code here
