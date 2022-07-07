@@ -41,7 +41,7 @@ shortest() {
 print_log(){
 
         str=$@
-        echo "[$(date +%F' '%T)] $str"
+        echo "[$(date +%F' '%H:%M)] $str"
 }
 
 
